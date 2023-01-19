@@ -4,6 +4,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { HomeScreen, ProfileScreen } from './src/screens/HomeScreen';
 import StatusBar from './src/shared/components/StatusBar';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import TabNavigator from './src/navigation/TabNavigator';
+import BottomSafeArea from './src/shared/components/BottomSafeArea';
 
 const Stack = createNativeStackNavigator();
 
@@ -12,18 +14,8 @@ export default function App() {
     <SafeAreaProvider>
       <NavigationContainer>
         <StatusBar />
-        <Stack.Navigator
-          screenOptions={{
-            headerShown: false
-          }}
-        >
-          <Stack.Screen name="Home" component={HomeScreen} />
-          <Stack.Screen name="Profile" component={ProfileScreen} />
-        </Stack.Navigator>
-        <View style={styles.container}>
-          <Text>Open up App.tsx to start working on your app!</Text>
-          {/* <StatusBar style="auto" /> */}
-        </View>
+        <TabNavigator />
+        <BottomSafeArea />
       </NavigationContainer>
     </SafeAreaProvider>
   );
