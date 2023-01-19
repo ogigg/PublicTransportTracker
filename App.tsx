@@ -15,9 +15,7 @@ export default function App() {
       <SafeAreaProvider>
         <NavigationContainer>
           <StatusBar />
-          <TabNavigator />
-          <BottomSafeArea />
-          
+          <TabNavigator />        
         </NavigationContainer>
       </SafeAreaProvider>
     </CustomThemeProvider>
