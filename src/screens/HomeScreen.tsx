@@ -1,9 +1,10 @@
 import { Button, View } from "react-native";
 import {Text, StyleSheet} from 'react-native';
 import { Button as ButtonMD } from 'react-native-paper';
-
+import { useTranslation } from "react-i18next";
 
 export const HomeScreen = ({navigation}) => {
+  const { t, i18n } = useTranslation();
     return (
       <View>
         <Button
@@ -12,8 +13,8 @@ export const HomeScreen = ({navigation}) => {
             navigation.navigate('Profile', {name: 'Jane'})
           }
         />
-        <ButtonMD icon="camera" mode="contained" onPress={() => console.log('Pressed')}>
-          Press me
+        <ButtonMD icon="camera" mode="contained" onPress={() => {console.log('Pressed')}}>
+          <Text>{t('bottomTabNavigation.home')}</Text>
         </ButtonMD>
       </View>
       
