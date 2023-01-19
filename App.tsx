@@ -4,7 +4,6 @@ import { StyleSheet } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import TabNavigator from './src/navigation/TabNavigator';
-import BottomSafeArea from './src/shared/components/BottomSafeArea';
 import StatusBar from './src/shared/components/StatusBar';
 import CustomThemeProvider from './src/theme/CustomThemeProvider';
 
