@@ -1,12 +1,14 @@
-import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
+import { Stop } from '../../models/stop'
+import { MockedStops } from '../../mocks/stops'
+import { createSlice } from '@reduxjs/toolkit'
 
 export interface StopState {
-  entities: any[]
+    entities: Stop[]
 }
 
 const initialState: StopState = {
-    entities: [],
+    entities: MockedStops,
 }
 
 export const stopSlice = createSlice({
@@ -14,13 +16,16 @@ export const stopSlice = createSlice({
   initialState,
   reducers: {
     increment: (state) => {
-      state.entities.push({})
+    // TODO: Implement logic
+    //   state.entities.push({})
     },
     decrement: (state) => {
-        state.entities.push({})
+        // TODO: Implement logic
+        // state.entities.push({})
     },
     incrementByAmount: (state, action: PayloadAction<number>) => {
-        state.entities.push({})
+        // TODO: Implement logic
+        // state.entities.push({})
     },
   },
 })
