@@ -24,8 +24,11 @@ export const HomeScreen = ({navigation}) => {
             navigation.navigate('Profile', {name: 'Jane'})
           }
         />
-        <ButtonMD icon="camera" mode="contained" onPress={() => {console.log('Pressed')}}>
-          <Text>{t('bottomTabNavigation.home')}</Text>
+        <ButtonMD icon="camera" mode="contained" onPress={() => {console.log('Pressed'); navigation.navigate('MoreNavigator')}}>
+          <Text>More</Text>
+        </ButtonMD>
+        <ButtonMD icon="camera" mode="contained" onPress={() => {console.log('Pressed'); navigation.navigate('MoreNavigator', { screen: 'Settings' })}}>
+          <Text>Settings</Text>
         </ButtonMD>
       </View>
       

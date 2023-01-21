@@ -4,5 +4,19 @@
         "search": "Search",
         "map": "Map",
         "more": "More"
+    },
+    "moreScreen": {
+        "notifications": "Notifications",
+        "statistics": "Statistics",
+        "settings": "Settings"
+    },
+    "settingsScreen": {
+        "title": "Settings",
+        "language": "Language",
+        "theme": {
+            "label": "Select theme",
+            "dark": "Dark Theme",
+            "light": "Light Theme"
+        }
     }
 }
