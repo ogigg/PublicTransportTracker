@@ -7,17 +7,21 @@ import TabNavigator from './src/navigation/TabNavigator';
 import StatusBar from './src/shared/components/StatusBar';
 import CustomThemeProvider from './src/theme/CustomThemeProvider';
 import './src/i18n/i18n';
+import { store } from './src/store/store'
+import { Provider } from 'react-redux'
 
 export default function App() {
   return (
-    <CustomThemeProvider>
-      <SafeAreaProvider>
-        <NavigationContainer>
-          <StatusBar />
-          <TabNavigator />        
-        </NavigationContainer>
-      </SafeAreaProvider>
-    </CustomThemeProvider>
+    <Provider store={store}>
+      <CustomThemeProvider>
+        <SafeAreaProvider>
+          <NavigationContainer>
+            <StatusBar />
+            <TabNavigator />        
+          </NavigationContainer>
+        </SafeAreaProvider>
+      </CustomThemeProvider>
+    </Provider>
 
   );
 }
