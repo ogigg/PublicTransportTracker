@@ -1,5 +1,5 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { SettingsScreen } from "../screens/SettingsScreen";
+import { SettingsScreen } from "../screens/SettingsScreen/SettingsScreen";
 import { MoreScreen } from "../screens/MoreScreen";
 import { useEffect } from "react";
 import { NavigationProp } from "@react-navigation/native";
