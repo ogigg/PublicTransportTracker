@@ -1,10 +1,9 @@
 import * as React from 'react';
-import {
-  MD3LightTheme,MD3DarkTheme,
-  Provider as PaperProvider,
-  MD3Theme,
-} from 'react-native-paper';
-import { useColorScheme } from 'react-native';
+import { useEffect } from 'react';
+import { MD3DarkTheme, MD3LightTheme, MD3Theme, Provider as PaperProvider } from 'react-native-paper';
+import { useSelector } from 'react-redux';
+
+import { selectTheme } from '../store/settings/settingsSlice';
 
 const lightTheme: MD3Theme = {
   ...MD3LightTheme,
@@ -99,10 +98,9 @@ const darkTheme: MD3Theme = {
 };
 
 export default function CustomThemeProvider({ children }) {
-  const scheme = useColorScheme();
-  console.log(scheme );
+  const theme = useSelector(selectTheme);
   return (
-    <PaperProvider theme={scheme === 'dark' ? darkTheme : lightTheme}>
+    <PaperProvider theme={theme === 'dark' ? darkTheme : lightTheme}>
      {children}
     </PaperProvider>
   );
