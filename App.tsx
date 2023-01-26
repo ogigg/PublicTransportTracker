@@ -15,10 +15,8 @@ export default function App() {
     <Provider store={store}>
       <CustomThemeProvider>
         <SafeAreaProvider>
-          <NavigationContainer>
-            <StatusBar />
-            <TabNavigator />        
-          </NavigationContainer>
+          <StatusBar />
+          <TabNavigator />        
         </SafeAreaProvider>
       </CustomThemeProvider>
     </Provider>

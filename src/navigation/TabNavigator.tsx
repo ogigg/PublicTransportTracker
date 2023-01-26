@@ -3,7 +3,6 @@ import React from 'react';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { useTranslation } from 'react-i18next';
-import { MoreScreen } from '../screens/MoreScreen';
 import { MoreStack } from './MoreStack';
 
 const Tab = createMaterialBottomTabNavigator();
