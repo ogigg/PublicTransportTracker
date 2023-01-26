@@ -4,8 +4,12 @@ import { MoreScreen } from "../screens/MoreScreen";
 import { useEffect } from "react";
 import { NavigationProp } from "@react-navigation/native";
 import { CommonActions } from '@react-navigation/native';
+import { useSelector } from "react-redux";
+import { selectTheme } from "../store/settings/settingsSlice";
+import { useTheme } from 'react-native-paper';
 
 export const MoreStack = ({navigation}: { navigation: NavigationProp<any> }) => {
+  const theme = useTheme();
   const Stack = createNativeStackNavigator();
 
   useEffect(() => {
@@ -18,7 +22,7 @@ export const MoreStack = ({navigation}: { navigation: NavigationProp<any> }) => 
   }, [navigation]);
 
     return (
-        <Stack.Navigator initialRouteName="More">
+        <Stack.Navigator initialRouteName="More" screenOptions={{ contentStyle: { backgroundColor: theme.colors.background }}}>
             <Stack.Screen
                 name="Settings"
                 component={SettingsScreen}
