@@ -4,5 +4,5 @@ export interface Stop {
     name: string;
     lat: number;
     lng: number;
-    zoneId: string;
+    zoneId: 'A' | 'B' | 'C';
 }

@@ -22,5 +22,10 @@
     },
     "buttons": {
         "cancel": "Cancel"
+    },
+    "homeScreen": {
+        "stopsList": {
+            "closest": "Closest"
+        }
     }
 }
