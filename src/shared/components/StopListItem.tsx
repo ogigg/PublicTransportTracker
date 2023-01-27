@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { View } from 'react-native';
+import { View, Animated, LayoutAnimation } from 'react-native';
 import { List, MD3Colors, Text, TouchableRipple } from 'react-native-paper';
 
 import { Stop } from '../../models/stop';
+import { ZoneIcon } from './ZoneIcon';
 
 interface StopListItemProps {
     stop: Stop;
@@ -12,6 +13,7 @@ export const StopListItem = ({ stop }: StopListItemProps) => {
 
   const expand = () => {
     setIsExpanded(!expanded);
+    LayoutAnimation.configureNext({...LayoutAnimation.Presets.easeInEaseOut, duration: 100 });
   }
   return (
     <TouchableRipple onPress={expand}>
@@ -25,7 +27,9 @@ export const StopListItem = ({ stop }: StopListItemProps) => {
             <List.Icon color={MD3Colors.tertiary70} icon={expanded ? "chevron-up" : "chevron-down"} />
           </View>
         </View>
-        {expanded && <View><Text>More Info TODO</Text></View>}
+        {expanded && <View>
+          <ZoneIcon zone={stop.zoneId}/>
+        </View>}
       </View>
     </TouchableRipple>
   );
