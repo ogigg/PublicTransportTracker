@@ -1,0 +1,1 @@
+export type Zone = 'A' | 'B' | 'C';
