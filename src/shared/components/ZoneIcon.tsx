@@ -23,7 +23,7 @@ export const ZoneIcon = ({ zone }: ZoneIconProps) => {
     return (
     <View style={{ borderWidth: 1, borderColor: theme.colors.onBackground }}
         className={`${backgroundStyle} rounded border-solid h-5 w-5 flex items-center justify-center`}>
-        <Text className="color-white font-bold">{zone}</Text>
+        <Text className="color-white font-bold text-[13px]">{zone}</Text>
     </View>
     );
 }

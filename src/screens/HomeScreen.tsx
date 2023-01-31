@@ -22,18 +22,6 @@ export const HomeScreen = ({navigation}) => {
 
     return (
       <View>
-        <Button
-          title="Go to Oskar's profile"
-          onPress={() =>
-            navigation.navigate('Profile', {name: 'Jane'})
-          }
-        />
-        <ButtonMD icon="camera" mode="contained" onPress={() => {console.log('Pressed'); navigation.navigate('MoreNavigator')}}>
-          <Text>More</Text>
-        </ButtonMD>
-        <ButtonMD icon="camera" mode="contained" onPress={() => {console.log('Pressed'); navigation.navigate('MoreNavigator', { screen: 'Settings' })}}>
-          <Text>Settings</Text>
-        </ButtonMD>
         <StopsList />
       </View>
       
