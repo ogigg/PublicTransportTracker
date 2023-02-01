@@ -4,6 +4,7 @@ import { createMaterialBottomTabNavigator } from '@react-navigation/material-bot
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { useTranslation } from 'react-i18next';
 import { MoreStack } from './MoreStack';
+import { MapScreen } from '../screens/MapScreen';
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -21,7 +22,7 @@ export default function TabNavigator() {
         tabBarIcon: ({ color }) => (
           <MaterialCommunityIcons name="magnify" color={color} size={26} />
         )}}/>
-      <Tab.Screen name="Map" component={ProfileScreen} options={{
+      <Tab.Screen name="Map" component={MapScreen} options={{
         tabBarLabel: t('bottomTabNavigation.map'),
         tabBarIcon: ({ color }) => (
           <MaterialCommunityIcons name="map" color={color} size={26} />
